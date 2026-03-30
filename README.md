@@ -4,8 +4,8 @@ classDiagram
     direction TB
 
     class Condominio {
-        -nombre : string
-        -direccion : string
+        -nombre : str
+        -direccion : str
         -listaDepartamentos : list
         -listaResidentes : list
         -listaAreasComunes : list
@@ -31,9 +31,9 @@ classDiagram
     }
 
     class Residente {
-        -nombre : string
+        -nombre : str
         -idResidente : int
-        -telefono : string
+        -telefono : str
         +pagarMantenimiento()
         +reservarArea()
         +registrarVisita()
@@ -46,7 +46,7 @@ classDiagram
     }
 
     class AreaComun {
-        -nombre : string
+        -nombre : str
         -capacidad : int
         +reservar()
         +cancelarReserva()
@@ -54,17 +54,17 @@ classDiagram
     }
 
     class Reserva {
-        -fecha : string
-        -hora : string
-        -estado : string
+        -fecha : str
+        -hora : str
+        -estado : str
         +confirmarReserva()
         +cancelarReserva()
     }
 
     class Pago {
         -monto : float
-        -fecha : string
-        -estado : string
+        -fecha : str
+        -estado : str
         +procesarPago()
         +generarComprobante()
     }
@@ -77,27 +77,27 @@ classDiagram
     }
 
     class Multa {
-        -motivo : string
+        -motivo : str
         -monto : float
-        -fecha : string
-        -estado : string
+        -fecha : str
+        -estado : str
         +generarMulta()
         +pagarMulta()
     }
 
     class Visitante {
-        -nombre : string
-        -documento : string
-        -fechaIngreso : string
-        -horaIngreso : string
-        -horaSalida : string
+        -nombre : str
+        -documento : str
+        -fechaIngreso : str
+        -horaIngreso : str
+        -horaSalida : str
         +registrarEntrada()
         +registrarSalida()
     }
 
     class Guardia {
-        -nombre : string
-        -turno : string
+        -nombre : str
+        -turno : str
         +verificarIngreso()
         +registrarIncidente()
     }
